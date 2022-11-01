@@ -6,7 +6,10 @@ public class Main {
 
         // This is our Main Method. Any code we write here will be executed when we run the program.
         // Write some code here to print out "Hello World" to the console.
-
+        System.out.println("Start of HW1");
+        System.out.println("Hello World");
+        System.out.println(2 + 3);
+        Pyramid.Output();
         // Write some code here to print out the sum of 2 and 3 to the console.
 
         // You will see another file called Pyramid.java

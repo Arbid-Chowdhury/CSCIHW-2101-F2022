@@ -15,6 +15,16 @@ Hint2: Also notice the method is void meaning you will not be returning anything
 */
 public class Pyramid {
     public static void Output() {
-        // Put your code here
-    }
+        System.out.println("X"); //Strings have ""
+        System.out.println("XX");
+        System.out.println("XXX");
+        System.out.println("XXXX");
+        System.out.println("XXXXX");
+        System.out.println("XXXXXX");
+        System.out.println("XXXXX");
+        System.out.println("XXXX");
+        System.out.println("XXX");
+        System.out.println("XX");
+        System.out.println("X");
+        }
 }
