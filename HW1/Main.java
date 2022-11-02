@@ -10,6 +10,10 @@ public class Main {
         System.out.println("Hello World");
         System.out.println(2 + 3);
         Pyramid.Output();
+        Adlibs lib = new Adlibs();
+        System.out.println(lib.story("Joe", 18, "Blue"));
+        Replace rep = new Replace(); 
+        System.out.println(rep.charReplace("I MAKE BREAD", 2, 'T'));
         // Write some code here to print out the sum of 2 and 3 to the console.
 
         // You will see another file called Pyramid.java
