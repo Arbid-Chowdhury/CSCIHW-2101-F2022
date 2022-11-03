@@ -1,7 +1,17 @@
 package HW2;
 
+import java.util.Scanner;
 
 public class MathGames {
+    public static void main(String[] args) {
+        Scanner num = new Scanner(System.in);
+        System.out.println("what is the adjacent side's value");
+        double adjacent = num.nextDouble();
+        System.out.println("what is the opposite side's value");
+        double opposite = num.nextDouble();
+        double Hypotenuse;
+        Hypotenuse = Math.sqrt((adjacent*adjacent)+ (opposite*opposite));
+        System.out.println("the length of the hypotenuse is " + Hypotenuse);
     // 1. Create a method that will calculate the Pythagorean Theorem (https://en.wikipedia.org/wiki/Pythagorean_theorem)
     // c = sqrt(a^2+b^2)
     // NOTE: You can assume you will only need to calculate the Hypotenuse
@@ -43,13 +53,7 @@ public class MathGames {
 
 
     // you do not need this main if you want to make a tester class
-     public static void main(String[] args){
-        System.out.println("Hello World");
-        
-        
-    }
-
-
-
+    
 
 }
+ }
