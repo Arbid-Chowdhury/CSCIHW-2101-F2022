@@ -22,7 +22,7 @@ public class MathGames {
     }
     public static String calculator(double avr){
     int newAverage = (int) Math.ceil(avr);
-    
+    System.out.println(newAverage);
         if ( newAverage>= 90)
 {
     return "A";
@@ -49,7 +49,7 @@ else
 
 public static void main(String[] args) {
     pythag(3, 4);
-    calculator(87);
+    System.out.println(calculator(87));
 }
 }
 
