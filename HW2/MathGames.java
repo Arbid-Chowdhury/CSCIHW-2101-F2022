@@ -8,11 +8,8 @@ package HW2;
     // Bonus points: Try to make it accept any 2 sides and return the 3rd. So it can take in
     // Hypotenuse and Perpendicular and return the base.
 import java.util.Scanner;
-
-import javax.sql.rowset.spi.SyncResolver;
 public class MathGames {
-
-    public void hypotenuse(double adjacent, double opposite){
+    public static void pythag(double adjacent, double opposite){
         Scanner num = new Scanner(System.in);
         System.out.println("what is the adjacent side's value");
         adjacent = num.nextDouble();
@@ -23,15 +20,38 @@ public class MathGames {
         System.out.println("the length of the hypotenuse is " + Hypotenuse);
         num.close();
     }
-    public static void calculator(String[float average, char grade] args){
-        Scanner ans = new Scanner(System.in);
-    System.out.println("WELCOME TO GRADE CALCULATOR, what is your average for your class");
-    average = ans.nextFloat();
-    System.out.println(Math.round(average));
-
-        System.out.println("Insert your current grade/average" + (i+1)+ ":");
-
+    public static String calculator(double avr){
+    int newAverage = (int) Math.ceil(avr);
+    
+        if ( newAverage>= 90)
+{
+    return "A";
+}
+else if (newAverage>=80)
+{
+    return "B";
+}
+else if(newAverage>=70)
+{
+    return "C";
+}
+else if(newAverage>=60)
+{
+    return "D";
+}
+else
+{
+   return "F";
+}
+    
     }
+    
+
+public static void main(String[] args) {
+    pythag(3, 4);
+    calculator(87);
+}
+}
 
     // 2. Create a method that will calcuate my grade in the class. You can use the
     // grade range as follows
