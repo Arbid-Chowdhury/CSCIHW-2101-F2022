@@ -80,6 +80,27 @@ public class BankAccount {
     // Create a method to withdraw money
     public void withdraw(double amount) {
         this.balance -= amount;
+    }
+        public void Overdraft(BankAccount bank, double value){
+        if (bank.balance < value){
+            System.out.println("Overdraft: Your account is overdrawn by: $ " + (value - bank.balance) + "YOU WILL BE CHARGED A $35 FEE");
+        System.out.println("Do you want to continue? (Y/N)");
+        }
+        {
+            Scanner input = new Scanner(System.in);
+            String answer = input.nextLine();
+            if (answer.equals("Y")){
+               bank.withdraw(value + 35);
+                System.out.println("Your new balance is: $" + bank.balance);
+            }
+            else if (answer.equals("N")){
+                System.out.println("Your balance is: $" + bank.balance + " Have a wonderful day!");
+            }
+            else{
+                System.out.println("Invalid input");
+            }
+            input.close();
+        }
         // above is the same as this.balance = this.balance - amount;
         // balance is 10,000
         // amount  is 2,000
@@ -94,8 +115,10 @@ public class BankAccount {
         withdraw(fee);
     }
 
-
-
+public void SimpleInterest(double p, double r, double t){
+    double amount = (p * r * t)/100;
+    System.out.println("The simple interest will be: $" + amount);
+}
     // Create a method that will calculate the interest on the balance using compound interest
     // P(1 + R/n)^(nt) - P 
     // P = Principal
@@ -140,7 +163,7 @@ public class BankAccount {
         choice = input.nextInt();
         return choice;
     }
-    // Create a method that will interact with the user based on their choice from the menu
+
     // This method will take a BankAccount object as an argument
     public static void interact(BankAccount account){
         // get the choice from the menu
