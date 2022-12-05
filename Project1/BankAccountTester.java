@@ -4,6 +4,8 @@ public class BankAccountTester {
         System.out.println("Welcome to the Bank Account Tester");
         // Example Bank Account used for Transfer Methods
         BankAccount gregChecking = new BankAccount(20000);
-
+        BankAccount gregSavings = new BankAccount(10000);
+        BankAccount User = new BankAccount(20000);
+BankAccount.interact(gregChecking);
     }
 }
