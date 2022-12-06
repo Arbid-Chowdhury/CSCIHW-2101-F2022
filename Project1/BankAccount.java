@@ -284,7 +284,7 @@ if (answer.equals("Y")){
             System.out.println("Invalid Choice");
             // interact(account);
         }
-
+input.close();
     }
     }
     
