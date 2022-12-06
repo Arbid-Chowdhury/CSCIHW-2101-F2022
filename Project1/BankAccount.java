@@ -145,13 +145,13 @@ public void SimpleInterest(double p, double r, double t){
         System.out.println("Amount after " + time + " years: $" + roundedamount);
     }
 
-public void Transfer(BankAccount User, BankAccount bank2, double funds){
+public void Transfer(BankAccount gregSavings, BankAccount gregChecking, double funds){
 
-    if (User.balance >= funds){
-    User.withdraw(funds);
-    bank2.deposit(funds);
-    System.out.println("User, Your new balance is: $" + User.balance);
-    System.out.println("Gregchecking, Your new balance is: $" + bank2.balance);
+    if (gregSavings.balance >= funds){
+    gregSavings.balance -= funds;
+    gregChecking.balance += funds;
+    System.out.println("Greg, Your new savings balance is: $" + gregSavings.balance);
+    System.out.println("Greg, Your new checking balance is: $" + gregChecking.balance);
 }
 else if (this.balance < funds){
     System.out.println("You do not have enough funds to transfer, Have a nice day");
@@ -168,18 +168,20 @@ if (answer.equals("Y")){
     if (answer2.equals("C")){
         System.out.println("You have chosen Compound Interest, How many years would you like to invest for?");
         int time = input.nextInt();
-        System.out.println("What is the interest rate?");
-        double rate = input.nextDouble();
-        System.out.println("How many times per year would you like to compound?");
-        int annum = input.nextInt();
-        calcInterest(bank.balance, time, rate, annum);
+        System.out.println("Your interest rate is .0001 percent. How much would you like to invest for pricipal amount?");
+        double principal = input.nextDouble();
+        double rate = .0001;
+        System.out.println("It will be compounded 4 times per year");
+        int annum = 4;
+        calcInterest(principal, time, rate, annum);
     }
     else if (answer2.equals("S")){
         System.out.println("You have chosen Simple Interest, How many years would you like to invest for?");
         int time = input.nextInt();
-        System.out.println("What is the interest rate?");
-        double rate = input.nextDouble();
-        SimpleInterest(bank.balance, rate, time);
+        System.out.println("Your interest rate is .001 percent. How much would you like to invest for pricipal amount?");
+        double rate = .001;
+        double principal2 = input.nextDouble();
+        SimpleInterest(principal2, rate, time);
     }
 } else if (answer.equals("N")){
         System.out.println("Have a nice day!");
@@ -272,8 +274,7 @@ if (answer.equals("Y")){
         }else if (choice == 7) {
             System.out.println("How much would you like to transfer?");
             double funds = input.nextDouble();
-            
-            
+        account.Transfer(account, account, funds);
         }else if (choice == 8) {
             account.Savings(account, account.balance);
             System.out.println("... Thank you for using the Bank Account Menu. Have a nice day! ...");
