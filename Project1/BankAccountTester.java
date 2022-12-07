@@ -6,7 +6,7 @@ public class BankAccountTester {
         BankAccount gregChecking = new BankAccount(20000);
         BankAccount gregSavings = new BankAccount(20000);
         
-BankAccount.interact(gregSavings);
+        BankAccount.interact(gregSavings, gregChecking);
 
     }
 }

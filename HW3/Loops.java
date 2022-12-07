@@ -23,13 +23,12 @@ public class Loops {
             if(str.charAt(i) == 'e')
                 {count++;}
             if (count >= 1 && count <= 3)
-               {
+            {
             return true;
             }
             else 
             return false;
-        }
-    }
+        }}
         return false;// <- this should be changed 
     }
 

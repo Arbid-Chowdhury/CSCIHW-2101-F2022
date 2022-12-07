@@ -148,11 +148,15 @@ public void SimpleInterest(double p, double r, double t){
 public void Transfer(BankAccount gregSavings, BankAccount gregChecking, double funds){
 
     if (gregSavings.balance >= funds){
-    gregSavings.balance -= funds;
-    gregChecking.balance += funds;
-    System.out.println("Greg, Your new savings balance is: $" + gregSavings.balance);
-    System.out.println("Greg, Your new checking balance is: $" + gregChecking.balance);
-}
+        System.out.println(gregChecking.balance);
+        gregChecking.withdraw(funds);
+        System.out.println("Greg, Your new savings balance is: $" + gregChecking.balance);
+        gregSavings.deposit(funds);
+        System.out.println(gregSavings.balance);
+        System.out.println("Greg, Your new checking balance is: $" + gregSavings.balance);
+        // System.out.println("Greg, Your new savings balance is: $" + gregSavings.balance);
+        // System.out.println("Greg, Your new checking balance is: $" + gregChecking.getBalance());
+    }
 else if (this.balance < funds){
     System.out.println("You do not have enough funds to transfer, Have a nice day");
 }
@@ -220,7 +224,7 @@ if (answer.equals("Y")){
     }
 
     // This method will take a BankAccount object as an argument
-    public static void interact(BankAccount account){
+    public static void interact(BankAccount account, BankAccount account2){
         // get the choice from the menu
         int choice = menu();
         // create a scanner object
@@ -274,7 +278,7 @@ if (answer.equals("Y")){
         }else if (choice == 7) {
             System.out.println("How much would you like to transfer?");
             double funds = input.nextDouble();
-        account.Transfer(account, account, funds);
+            account.Transfer(account, account2, funds);
         }else if (choice == 8) {
             account.Savings(account, account.balance);
             System.out.println("... Thank you for using the Bank Account Menu. Have a nice day! ...");
