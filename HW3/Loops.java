@@ -20,6 +20,8 @@ public class Loops {
         int count=0;
         for(int i=0; i<str.length(); i++){
          {  
+            //Professor i flipped the if statements and it didnt work. 
+            //It made all the tests false instead of the previous issue of all true.
             if(str.charAt(i) == 'e')
                 {count++;}
             if (count >= 1 && count <= 3)
