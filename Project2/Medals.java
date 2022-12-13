@@ -69,8 +69,6 @@ public class Medals {
         };
         System.out.println("        Country    Gold    Silver    Bronze   Total");
 
-
-        // TODO
         // NOTE: THIS CAN BE DONE WITH AN ARRAY OR ARRAY LIST OR BOTH IF YOU FIND IT EASIER
         // Print countries, counts, and row totals (IE total medals by country)
         // for formatting use these printf statements
@@ -96,8 +94,6 @@ for(int i=0;i<COUNTRIES;i++)
     }
     System.out.printf("%8d\n",total);
 }
-
-
         // Display the total medals of each medal class
         // First create an Integer Array/ArrayList called medalCounts 
         // your rows are counts.length
