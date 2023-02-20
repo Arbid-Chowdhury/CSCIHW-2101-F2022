@@ -58,7 +58,14 @@ public class BankAccount implements Measurable, Filter
    
    public boolean Accept(Object Y)
    {
-   return true;
+   double limit = (double) Y;
+   if (balance > limit)
+   {
+      return true;
+   }
+   else {
+      return false;
+   }
    }
 }
 
