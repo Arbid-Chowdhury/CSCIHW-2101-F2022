@@ -62,7 +62,8 @@ public class L1 extends Tools{
                 System.out.println("Welcome to Level 2!");
                 L2 level2 = new L2();}
             }
-        else {
+        else 
+        {
             System.out.println("WRONG!");
             attempt++;
             if (attempt < 2) {
@@ -85,6 +86,8 @@ public class L1 extends Tools{
 
             input.close();
         }}}
+
+
         /*Scanner input = new Scanner(System.in);
         int attempt = 0;
             if (answer < 10) 
